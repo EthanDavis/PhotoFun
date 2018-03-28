@@ -1,0 +1,9 @@
+<div layout="row" layout-wrap>
+    <mat-grid-list cols="5" rowHeight="5:3">
+        <mat-grid-tile *ngFor="let photo of photos">
+            <a (click)="openPhoto(photo)">
+                <img [src]="photo.thumbnailUrl">
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
