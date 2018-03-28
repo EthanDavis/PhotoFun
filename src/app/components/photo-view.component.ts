@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PhotoService } from "../services/photo-service";
 import { Photo } from "../models/photo";
-import { MatDialogRef, MatDialog } from "@angular/material";
+import { MatDialogRef, MatDialog, MatDialogConfig } from "@angular/material";
 import { PhotoDialogComponent } from "./dialogs/photo-dialog.component";
 
 @Component({
@@ -12,6 +12,7 @@ export class PhotoViewComponent implements OnInit {
     photoService: PhotoService;
     photos: Photo[];
     dialog: MatDialog;
+
 
     constructor(photoService: PhotoService, dialogRef: MatDialog) {
         this.photoService = photoService;
@@ -24,8 +25,10 @@ export class PhotoViewComponent implements OnInit {
     }
 
     openPhoto(photo: Photo): void {
-        this.dialog.open(PhotoDialogComponent, {
+        const dialogConfig: MatDialogConfig = {
+            height: "90%", width: "90%", maxWidth: "90%",
             data: photo
-        });
+        };
+        this.dialog.open(PhotoDialogComponent, dialogConfig);
     }
 }

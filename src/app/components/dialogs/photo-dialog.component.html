@@ -1,26 +1,25 @@
-<mat-dialog-content>
+<div fxLayout="column">
     <div fxLayout="row" fxLayoutAlign="end end">
         <button mat-button (click)="close()">
             <span>&times;</span>
         </button>
     </div>
-    <div class="fullImage" fxLayout="row">
-        <div fxLayout="column" fxLayoutAlign="start center">
-            <h3 mat-dialog-title>{{photoData.title}}</h3>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="start center">
+    <div fxLayout="column" fxLayoutAlign="start center">
+        <h3 mat-dialog-title>{{photoData.title}}</h3>
+    </div>
+    <div fxLayout="column">
+        <div fxLayout="row" fxLayoutAlign="center center">
             <img [src]="photoData.url">
         </div>
     </div>
-    <mat-form-field fxFill fxLayout="column" fxLayoutAlign="start start">
-            <textarea matInput matTextareaAutosize matAutosizeMinRows="2"
-            matAutosizeMaxRows="5" [(ngModel)]="comment"></textarea>
+    <mat-form-field fxFill fxLayout="column" fxLayoutAlign="center start">
+        <input matInput [(ngModel)]="comment">
     </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions fxLayout="column" fxLayoutAlign="start start">
-    <button mat-button (click)="storeCommentInSessionStorage()">
+</div>
+<div fxLayout="column" fxLayoutAlign="end end">
+    <button mat-button (click)="closeAndSave()">
         <span>
-            Comment
+            Save
         </span>
     </button>
-</mat-dialog-actions>
+</div>

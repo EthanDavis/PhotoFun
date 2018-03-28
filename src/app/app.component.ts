@@ -6,11 +6,4 @@ import { PhotoService } from "./services/photo-service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit {
-  title = "app";
-
-  ngOnInit(): void {
-
-  }
-
-}
+export class AppComponent  { }

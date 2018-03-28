@@ -34,4 +34,9 @@ export class PhotoDialogComponent implements OnInit {
         const comment: string = this.sessionStorage.getItem(this.photoData.id);
         return (comment !== null) ? comment : "";
     }
+
+    closeAndSave(): void {
+        this.storeCommentInSessionStorage();
+        this.close();
+    }
 }
