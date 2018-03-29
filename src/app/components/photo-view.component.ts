@@ -26,7 +26,7 @@ export class PhotoViewComponent implements OnInit {
 
     openPhoto(photo: Photo): void {
         const dialogConfig: MatDialogConfig = {
-            height: "90%", width: "90%", maxWidth: "90%",
+            height: "90%", width: "60%", maxWidth: "90%",
             data: photo
         };
         this.dialog.open(PhotoDialogComponent, dialogConfig);

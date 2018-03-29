@@ -10,7 +10,7 @@ import { PhotoDialogComponent } from "./dialogs/photo-dialog.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule } from "@angular/forms";
-
+import { PhotoService } from "../services/photo-service";
 
 @NgModule({
     declarations: [
@@ -19,6 +19,9 @@ import { FormsModule } from "@angular/forms";
     ],
     entryComponents: [
         PhotoDialogComponent
+    ],
+    providers: [
+        PhotoService
     ],
     imports: [
         CommonModule,

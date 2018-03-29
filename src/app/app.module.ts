@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
-import { PhotoService } from "./services/photo-service";
+
 import { AppRouting } from "./app.routing";
 import { PhotoViewModule } from "./components/photo-view.module";
 
@@ -18,7 +18,7 @@ import { PhotoViewModule } from "./components/photo-view.module";
     PhotoViewModule,
     AppRouting
   ],
-  providers: [PhotoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

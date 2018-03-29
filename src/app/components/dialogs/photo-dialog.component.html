@@ -12,12 +12,12 @@
             <img [src]="photoData.url">
         </div>
     </div>
-    <mat-form-field fxFill fxLayout="column" fxLayoutAlign="center start">
-        <input matInput [(ngModel)]="comment">
+    <mat-form-field class="full-width" fxFill fxLayout="column" fxLayoutAlign="center start">
+        <input matInput class="app-input" placeholder="Leave a comment" [(ngModel)]="comment">
     </mat-form-field>
 </div>
 <div fxLayout="column" fxLayoutAlign="end end">
-    <button mat-button (click)="closeAndSave()">
+    <button mat-button (click)="saveAndClose()">
         <span>
             Save
         </span>

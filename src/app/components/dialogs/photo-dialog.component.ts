@@ -35,7 +35,7 @@ export class PhotoDialogComponent implements OnInit {
         return (comment !== null) ? comment : "";
     }
 
-    closeAndSave(): void {
+    saveAndClose(): void {
         this.storeCommentInSessionStorage();
         this.close();
     }
